@@ -26,7 +26,7 @@ try {
     const message = `
     <p>Dear Sertic </p>
     <p>Please click on reply to contact me regarding the product:</p>
-    // <p style:{{color: red}}>${id}</p>
+    
     <h5>My Email Adress: </h5>
     <p>${email}</p>
     <h5>Company Name : </h5>
