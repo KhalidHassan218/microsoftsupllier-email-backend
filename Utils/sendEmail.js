@@ -11,6 +11,8 @@ const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
     },
     tls: {
       ciphers:'SSLv3',
+          rejectUnauthorized: false,
+
       
     },
   });
