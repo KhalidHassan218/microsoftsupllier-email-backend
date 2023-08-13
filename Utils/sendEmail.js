@@ -2,23 +2,19 @@ const nodemailer = require("nodemailer");
 
 const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
   const transporter = nodemailer.createTransport({
-    // host: process.env.EMAIL_HOST,
-    name:'smtp.office365.com',
-    host: 'smtp.office365.com',
-  port: 587,
-  secure: false, // true for 465, false for other ports
-  requireTLS: true, // Use TLS
-  // secure: true, // true for 465, false for other ports
+   service:"hotmail",
+    host: process.env.EMAIL_HOST,
+    port: 995,
+    secureConnection: false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
-    // tls: {
-    //   ciphers:'SSLv3',
-    //       rejectUnauthorized: false,
-
+    tls: {
+      ciphers:'SSLv3',
+      rejectUnauthorized: false,
       
-    // },
+  }
   });
 
   const options = {
