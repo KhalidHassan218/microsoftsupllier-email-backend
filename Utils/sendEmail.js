@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const sendEmail = async (subject, message, send_to, sent_from, reply_to) => {
   const transporter = nodemailer.createTransport({
     // host: process.env.EMAIL_HOST,
-    name:'smtp.office365.com'T,
+    name:'smtp.office365.com',
     host: 'smtp.office365.com',
   port: 587,
   secure: false, // true for 465, false for other ports
